@@ -1,18 +1,20 @@
 <script>
-  chessLength = 8;
-  chessLine = "";
-  chess = "";
+  function chess(chessLength) {
+    chessLine = "";
+    chessLog = "";
 
-  for (let index = 0; index <= chessLength; index++) {
-    newCharacter = index % 2 == 0 ? " " : "#";
-    chessLine += newCharacter;
-    chessString = chessLine + "\n";
+    for (let index = 0; index <= chessLength; index++) {
+      newCharacter = index % 2 == 0 ? " " : "#";
+      chessLine += newCharacter;
+      chessString = chessLine + "\n";
+    }
+
+    for (let index = 0; index < chessLength; index++) {
+      chessLog += index % 2 == 0 ? chessString : " " + chessString;
+    }
+
+    console.log(chessLog);
   }
 
-  for (let index = 0; index <= chessLength; index++) {
-    chess += chessString;
-    console.log(chess);
-  }
-
-  //   chessString = " # # \n# # #";
+  chess(8);
 </script>

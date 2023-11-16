@@ -1,0 +1,18 @@
+<script>
+  chessLength = 8;
+  chessLine = "";
+  chess = "";
+
+  for (let index = 0; index <= chessLength; index++) {
+    newCharacter = index % 2 == 0 ? " " : "#";
+    chessLine += newCharacter;
+    chessString = chessLine + "\n";
+  }
+
+  for (let index = 0; index <= chessLength; index++) {
+    chess += chessString;
+    console.log(chess);
+  }
+
+  //   chessString = " # # \n# # #";
+</script>
